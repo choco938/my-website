@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>自己紹介 | 大学1年生</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f1ea;
+      --ink: #202b29;
+      --muted: #62716c;
+      --green: #355b4b;
+      --line: rgba(32, 43, 41, .18);
+      --accent: #dce7dc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+
+    .page {
+      width: min(100% - 40px, 1080px);
+      margin-inline: auto;
+    }
+
+    header {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      font-size: .82rem;
+      letter-spacing: .12em;
+    }
+
+    .mark {
+      font-weight: 700;
+    }
+
+    .header-note {
+      color: var(--muted);
+    }
+
+    main {
+      padding: clamp(56px, 11vw, 132px) 0 80px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(220px, .6fr);
+      gap: clamp(40px, 9vw, 120px);
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 22px;
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 8vw, 6.6rem);
+      line-height: 1.2;
+      letter-spacing: -.055em;
+      font-weight: 600;
+    }
+
+    .lead {
+      max-width: 37em;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+    }
+
+    .side-card {
+      position: relative;
+      min-height: 250px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--accent);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .side-card::before,
+    .side-card::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(53, 91, 75, .24);
+      border-radius: 50%;
+      width: 210px;
+      height: 210px;
+      right: -70px;
+      top: 45px;
+    }
+
+    .side-card::after {
+      width: 155px;
+      height: 155px;
+      right: -42px;
+      top: 73px;
+    }
+
+    .card-label {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      font-size: .78rem;
+      letter-spacing: .14em;
+    }
+
+    .card-year {
+      position: relative;
+      z-index: 1;
+      color: var(--green);
+      font-size: clamp(3.5rem, 7vw, 5rem);
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: -.07em;
+    }
+
+    .card-caption {
+      position: relative;
+      z-index: 1;
+      margin-top: 12px;
+      font-size: .9rem;
+    }
+
+    .divider {
+      height: 1px;
+      margin: clamp(64px, 11vw, 120px) 0 34px;
+      background: var(--line);
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: .8rem;
+      letter-spacing: .18em;
+      color: var(--green);
+    }
+
+    .detail-copy {
+      margin: 0;
+      max-width: 42em;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 36px, 540px);
+      }
+
+      header {
+        min-height: 64px;
+      }
+
+      .header-note {
+        max-width: 12em;
+        text-align: right;
+      }
+
+      main {
+        padding: 64px 0 60px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .side-card {
+        min-height: 190px;
+      }
+
+      .divider {
+        margin: 64px 0 26px;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <span class="mark">PROFILE</span>
+      <span class="header-note">自己紹介</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">はじめまして</p>
+          <h1 id="page-title">自己紹介</h1>
+          <p class="lead">
+            情報学科で学びながら、趣味のダンスを楽しんでいます。
+            中学受験塾とカラオケでアルバイトをしています。
+          </p>
+        </div>
+
+        <aside class="side-card" aria-label="大学1年生">
+          <span class="card-label">CURRENTLY</span>
+          <div>
+            <div class="card-year">01</div>
+            <div class="card-caption">大学1年生</div>
+          </div>
+        </aside>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="details" aria-labelledby="about-title">
+        <h2 id="about-title">ABOUT</h2>
+        <p class="detail-copy">
+          情報学科で学んでいます。趣味はダンスです。
+          中学受験塾とカラオケでアルバイトをしていて、
+          どちらも学生が多く、アルバイト同士のコミュニケーションが
+          充実しているところを楽しいと感じています。
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>自己紹介</span>
+      <span>大学1年生</span>
+    </footer>
+  </div>
+</body>
+</html>
